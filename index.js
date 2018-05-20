@@ -18,20 +18,20 @@ var reviews = [
 	{ title: "Igoor", content: "Great WEBsite" },
 	{ title: "Rusya", content: "Great WEBsite" },
 	{ title: "Ivan", content: "Great WEBsite" }
-];
+];//здесь хранится все что постится на страницу reviews 
 
 var posts = [
-	{ title: rate[0].ccy, content: rate[0].buy, content1: "-", content2: rate[0].sale },
-	{ title: rate[1].ccy, content: rate[1].buy, content1: "-", content2: rate[1].sale},
-	{ title: rate[2].ccy, content: rate[2].buy, content1: "-", content2: rate[2].sale},
-];
+	{ title: rate[0].ccy, content: rate[0].buy, content1: "-", content2: rate[0].sale },//если будешь добавлять здесь content то не забудь сделать это и на странице main там оставлю коммент
+	{ title: rate[1].ccy, content: rate[1].buy, content1: "-", content2: rate[1].sale },
+	{ title: rate[2].ccy, content: rate[2].buy, content1: "-", content2: rate[2].sale },
+];//здесь хранится все что постится на главную страницу в данном случае тут лежат json данные из файлы courses
 
 app.get( "/", function( req, res ) {
-	res.render( "main.ejs", {posts: posts} );
+	res.render( "main.ejs", {posts: posts} );//делаем доступным posts для использования в стр main
 });
 
 app.get( "/reviews", function( req, res ) {
-	res.render( "reviews.ejs", {reviews: reviews} );
+	res.render( "reviews.ejs", {reviews: reviews} );//делаем доступным reviews для использования в стр reviews
 });
 
 app.get( "/post/:id", function( req, res ){
@@ -43,7 +43,7 @@ app.get( "/post", function(req, res){
 	res.render("post.ejs")
 });
 
-app.post( "/post", function(req, res){
+app.post( "/post", function(req, res){//для постинга на странице reviews и отправки на мыло
 	var title = req.body.title;
 	var content = req.body.content;
 
@@ -51,7 +51,7 @@ app.post( "/post", function(req, res){
 
 	res.redirect( "/reviews" );
 
-	let transporter = nodemailer.createTransport({
+	let transporter = nodemailer.createTransport({//опции для использования почтовика как площадки для отправки
 		service: 'outlook',
 		auth: {
 			user: 'exmple@outlook.com', 
@@ -59,7 +59,7 @@ app.post( "/post", function(req, res){
 		}
 	});
 
-	let mailOptions = {
+	let mailOptions = {//для отправки данных с страницы post
 		from: 'example@outlook.com', //введите здесь свой email
 		to: 'example@gmail.com',  
 		subject: title,
