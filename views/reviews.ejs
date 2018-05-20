@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Rates</title>
+  <style>
+    p {
+    font: 15pt sans-serif;
+    text-decoration: underline;   
+   } 
+   h1 {
+    font: 200% serif;
+   }
+  </style>
+ </head>
+ <body bgcolor="#FFFAF0">
+   <table align="center" width="80%" background="background.jpg">
+  	<tr><td><h1>Wellocme to the KinoMir</h1>
+  	<hr></td></tr>
+  	<% for(var i = 0; i < reviews.length; i++){ %>
+  	<tr><td><div class="post" align="left">
+  		<h1><%= reviews[i].title %>
+  		<p><%= reviews[i].content %></p>
+  	</div></td></tr>
+   <% } %>
+  </table>
+  <p><a href="/post/<%= (i + 1) %>">Put your review</a></p>
+ </body>
+</html>
