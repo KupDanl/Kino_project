@@ -54,14 +54,14 @@ app.post( "/post", function(req, res){
 	let transporter = nodemailer.createTransport({
 		service: 'outlook',
 		auth: {
-			user: 'rorykory@outlook.com', 
+			user: 'exmple@outlook.com', 
 			pass: '' 
 		}
 	});
 
 	let mailOptions = {
-		from: 'rorykory@outlook.com', //введите здесь свой email
-		to: 'mrgandghubas@gmail.com',  
+		from: 'example@outlook.com', //введите здесь свой email
+		to: 'example@gmail.com',  
 		subject: title,
 		text: content
 	}
