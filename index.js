@@ -55,7 +55,7 @@ app.post( "/post", function(req, res){
 		service: 'outlook',
 		auth: {
 			user: 'rorykory@outlook.com', 
-			pass: 'Kryptonite' 
+			pass: '' 
 		}
 	});
 
