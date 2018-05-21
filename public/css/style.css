@@ -1,22 +1,18 @@
-p{
+p {
     font: 15pt sans-serif;  
     margin: 10px;
    } 
-h1{
+   
+h1 {
     font: 200% serif;
     margin: 10px;
    }
+   
 TABLE.main {
-    width: 100%;
+    width: 80%;
 	height: 1200px;
     border-collapse: collapse; 
-    border: 2px groove #808080;
-	background: #FFFFE0;
-   }
-   
-   TD, TH {
-    padding: 3px; /* Поля вокруг содержимого таблицы */
-    border: 1px solid black; /* Параметры рамки */
+	background: white;
    }
    
 TR, TD.think {
@@ -42,9 +38,17 @@ BODY {
 	border-top: 5px solid #7e7e7e;
 	background-size: 100%;
    }
+textarea {
+	background-color: #f3f3f3;
+	height: 300px;
+	width: 300px;
+	color: #b2b2b2;
+	padding: 0 10px;
+	vertical-align: top;
+   }
+   
 input[type="text"] {
 	background-color: #f3f3f3;
-	border: 1px solid #e7e7e7;
 	height: 30px;
 	width: 300px;
 	color: #b2b2b2;
@@ -52,9 +56,47 @@ input[type="text"] {
 	vertical-align: top;
    }
    
+input[type="search"] {
+	background-color: #f3f3f3;
+	height: 30px;
+	width: 300px;
+	color: #b2b2b2;
+	padding: 0 10px;
+	vertical-align: top;
+   }
+
+input[type="submit"] {
+	background-color: #D3D3D3;
+	border: none;
+	height: 30px;
+	width: 80px;
+	color: #808080;
+	padding: 0 10px;
+	vertical-align: top;
+   }
+   
+input[type="submit"]:hover {
+	   background:#808080;
+	   color:white;
+   }
+   
 input[type="button"] {
 	color: #808080;
-	background-color: #FFFFE0;
+	background-color: #D3D3D3;
+	margin:20px;
+	border: none;
+	height: 50px;
+	width: 200px;
+	font-family: 'Oswald', sans-serif;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+   }
+   
+button {
+	color: #808080;
+	background-color: #D3D3D3;
+	margin:20px;
 	border: none;
 	height: 50px;
 	width: 200px;
@@ -65,7 +107,7 @@ input[type="button"] {
    }
    
 input[type="button"]:hover {
-	   background:#FFD700;
+	   background:#808080;
 	   color:white;
    }
    
@@ -91,31 +133,44 @@ input[type="button"]:hover {
     z-index:9;
    }
    
-body > div
-    {
-            
-        margin:60px 60px;
-            
-            width:500px;
-            height:309px;
-            
-            background:#6d6d6d;
-            color:#fff;
-            
-            font-family:Roboto;
-            font-weight:700;
-            font-size:3.3em;
-            
-            text-align:center;
-            line-height:297px;
-            
-            transition:all 0.3s ease;
-            
-        }
-        
-        .grow:hover
-        {
-            -webkit-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            transform: scale(1.2);
-        }
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+ perspective: 1000;
+}
+ /* переверните сторону при проведении мышью */
+ .flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+ }
+
+.flip-container, .front, .back {
+ width: 320px;
+ height: 480px;
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+ transition: 0.6s;
+ transform-style: preserve-3d;
+
+ position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+ backface-visibility: hidden;
+
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+ z-index: 2;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+ transform: rotateY(180deg);
+}
+

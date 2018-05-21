@@ -2,34 +2,50 @@
 <html>
  <head>
 	<meta charset="utf-8">
-	<title>Rates</title>
+	<title>Cinema</title>
 	<link rel="stylesheet" href="/css/style.css">
 	</script> 
  </head>
- <body bgcolor="#FFFAF0">
+ <body>
    <table align="center" class="main">
   	<tr>
 		<td height="80"  width="50" bgcolor="white">
-				<img src="https://static.kinoafisha.info/upload/8rqmnq.jpg">
+				<a href="/"><img src="images1.jpg"></a><img src="http://x-lines.ru/letters/i/cyrillicscript/0041/000000/40/0/epwsh3mpcr.png">
 		</td>
 		<td height="80" bgcolor="white" colspan="3">
 			<div align="right">
-				<input type="text"><input type="button" value="Search"></input>
+				<input type="search">
+				<input type="submit" value="Search">	
 			</div>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="4" height="60">
 				<div align="center">
-					<input type="button" value="Films" onclick="javascript:window.location=''"/>
+					<input type="button" value="Films" onclick="javascript:window.location='/'"/>
 					<input type="button" value="Reviews" onclick="javascript:window.location='reviews'"/>
 					<input type="button" value="Contacts" onclick="javascript:window.location='post'"/>
-					<input type="button" value="About us" onclick="javascript:window.location=''"/>
+					<input type="button" value="About us" onclick="javascript:window.location='post'"/>
 				</div>
 			</td>
 		</tr>
 		<tr>
-			<td class="think" >
+			<% for(var i = 0; i < 4; i++){ %>
+			<td height="700px"><div class="post" align="center" style="background-color:white">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="font">
+								<img src=<%= posts[i].title %>>
+								<p style="background-color:white"><font color="#808080" face="cambria"><%= posts[i].content %></font></p>
+							</div>
+							<div  class="back" style="background-color: #D3D3D3">
+								<p style="background-color: #D3D3D3"><font color="#808080" face="cambria"><%= posts[i].content1 %></font></p>
+							</div>
+						</div>
+					</div>
+				</div></td>
+			<% } %>
+			<!--<td class="think" >
 				<div class="grow">
 					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
 					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
@@ -68,8 +84,33 @@
 					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
 					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
 				</div>
+			</td>-->
+		</tr>	
+		<!--<tr>
+			<td colspan="4">
+				<div>
+					<img src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/1345014/9f44d06fc5fbef52b997eb0deb543b36/575" align="left">
+					<p align="left">После покупки студии Lucasfilm в 2012 году конгломератом Disney стало понятно, что приключения героев «Звездных войн» мы будем смотреть до конца жизни. Две существующие трилогии дополнились третьей, а помимо этого студия раздвигает рамки повествования, переходя от саги семейства Скайуокер к новым историям. Спин-оффы пока даются студии непросто: «Изгой-один» пришлось переделывать, а «Хан Соло» и вовсе обещал стать провальным проектом.</p>
+				</div>
 			</td>
-		</tr>		
+		</tr>-->
+		<tr>
+			<% for(var i = 4; i < 8; i++){ %>
+			<td height="700px"><div class="post" align="center" style="background-color:white">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="font">
+								<img src=<%= posts[i].title %>>
+								<p style="background-color:white"><font color="#808080" face="cambria"><%= posts[i].content %></font></p>
+							</div>
+							<div  class="back" style="background-color: #D3D3D3">
+								<p style="background-color: #D3D3D3"><font color="#808080" face="cambria"><%= posts[i].content1 %></font></p>
+							</div>
+						</div>
+					</div>
+				</div></td>
+			<% } %>
+		</tr>
   </table>
  </body>
 </html>

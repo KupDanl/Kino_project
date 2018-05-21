@@ -1,16 +1,40 @@
-<!DOCTYPE>
+<!DOCTYPE HTML>
 <html>
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Put your review</title>
+	<meta charset="utf-8">
+	<title>Cinema</title>
+	<link rel="stylesheet" href="/css/style.css">
+	</script> 
  </head>
- <body bgcolor="#FFFAF0">
-  <h1>Put your review</h1>
-  <form action="/post", method="post">
-  	<label for="title">Title</label><br>
-  	<input type="text" name="title" id="title"><br>
-  	<label for="content">Content</label><br>
-  	<textarea name="content" id="content" cols="30" rows="10"></textarea><br>
-  	<button>Send</button><br>
-  </form>
+ <body>
+   <table align="center" class="main">
+  	<tr>
+		<td height="80"  width="50" bgcolor="white">
+				<a href="/"><img src="images1.jpg"></a><img src="http://x-lines.ru/letters/i/cyrillicscript/0041/000000/40/0/epwsh3mpcr.png">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" height="60">
+			<div align="center">
+				<input type="button" value="Films" onclick="javascript:window.location='/'"/>
+				<input type="button" value="Reviews" onclick="javascript:window.location='reviews'"/>
+				<input type="button" value="Contacts" onclick="javascript:window.location='post'"/>
+				<input type="button" value="About us" onclick="javascript:window.location='post'"/>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" valign="top">
+			<p><font color="#808080" face="cambria">You can leave your review about the web-site or film which we should add to our web-site. If you are unhappy because of our web-site, you can recommend that we should improve.</font></p>
+			<p><font color="#808080" face="cambria">Вы можете оставить свой отзыв о веб-сайте или фильме, который мы должны добавить на наш веб-сайт. Если вы несчастливы из-за нашего веб-сайта, вы можете порекомендовать нам что стоитулучшить.</font></p>
+			<form action="/post", method="post">
+				<label for="title"><font color="#808080" face="cambria">Title</font></label><br>
+				<input type="text" name="title" id="title"><br>
+				<label for="content"><font color="#808080" face="cambria">Content</font></label><br>
+				<textarea name="content" id="content" cols="30" rows="10"></textarea><br>
+				<button>Send</button><br>
+			 </form>
+		</td>
+	</tr>
  </body>
+</html>

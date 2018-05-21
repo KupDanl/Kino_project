@@ -1,29 +1,38 @@
-<!DOCTYPE>
+<!DOCTYPE HTML>
 <html>
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Rates</title>
-  <style>
-    p {
-    font: 15pt sans-serif;
-    text-decoration: underline;   
-   } 
-   h1 {
-    font: 200% serif;
-   }
-  </style>
+	<meta charset="utf-8">
+	<title>Cinema</title>
+	<link rel="stylesheet" href="/css/style.css">
+	</script> 
  </head>
- <body bgcolor="#FFFAF0">
-   <table align="center" width="80%" background="background.jpg">
-  	<tr><td><h1>Wellocme to the KinoMir</h1>
-  	<hr></td></tr>
+ <body>
+   <table align="center" class="main">
+  	<tr>
+		<td height="80"  width="50" bgcolor="white">
+				<a href="/"><img src="images1.jpg"></a><img src="http://x-lines.ru/letters/i/cyrillicscript/0041/000000/40/0/epwsh3mpcr.png">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" height="60">
+				<div align="center">
+					<input type="button" value="Films" onclick="javascript:window.location='/'"/>
+					<input type="button" value="Reviews" onclick="javascript:window.location='reviews'"/>
+					<input type="button" value="Contacts" onclick="javascript:window.location='post'"/>
+					<input type="button" value="About us" onclick="javascript:window.location='post'"/>
+				</div>
+			</td>
+		</tr>
   	<% for(var i = 0; i < reviews.length; i++){ %>
-  	<tr><td><div class="post" align="left">
-  		<h1><%= reviews[i].title %>
-  		<p><%= reviews[i].content %></p>
-  	</div></td></tr>
+  	<tr>
+		<td>
+			<div class="post" align="left">
+				<h1><font color="#808080" face="cambria"><%= reviews[i].title %></font></h1>
+				<p><font color="#808080" face="cambria"><%= reviews[i].content %></font></p>
+			</div>
+		</td>
+	</tr>
    <% } %>
   </table>
-  <p><a href="/post/<%= (i + 1) %>">Put your review</a></p>
  </body>
 </html>
