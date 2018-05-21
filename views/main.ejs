@@ -1,28 +1,75 @@
-<!DOCTYPE>
+<!DOCTYPE HTML>
 <html>
  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Rates</title>
-  <style>
-    p {
-    font: 15pt sans-serif;  
-   } 
-   h1 {
-    font: 200% serif;
-   }
-  </style>
+	<meta charset="utf-8">
+	<title>Rates</title>
+	<link rel="stylesheet" href="/css/style.css">
+	</script> 
  </head>
  <body bgcolor="#FFFAF0">
-   <table align="center" width="80%" background="background.jpg">
-  	<tr><td><h1>Wellocme to the KinoMir</h1>
-  	<hr></td></tr>
-  	<% for(var i = 1; i < posts.length; i++){ %>
-  	<tr><td><div class="post" align="left">
-  		<h1><%= posts[i].title %>
-  		<p><%= posts[i].content %> <%= posts[i].content1 %> <%= posts[i].content2%></p>//здесь добавляешь content если в index в posts расширял 
-  	</div></td></tr>
-   <% } %>
+   <table align="center" class="main">
+  	<tr>
+		<td height="80"  width="50" bgcolor="white">
+				<img src="https://static.kinoafisha.info/upload/8rqmnq.jpg">
+		</td>
+		<td height="80" bgcolor="white" colspan="3">
+			<div align="right">
+				<input type="text"><input type="button" value="Search"></input>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" height="60">
+				<div align="center">
+					<input type="button" value="Films" onclick="javascript:window.location=''"/>
+					<input type="button" value="Reviews" onclick="javascript:window.location='reviews'"/>
+					<input type="button" value="Contacts" onclick="javascript:window.location='post'"/>
+					<input type="button" value="About us" onclick="javascript:window.location=''"/>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="think" >
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+			</td>
+			<td class="think" align="center">
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+			</td>
+			<td class="think" align="center">
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+			</td>
+			<td class="think" align="center">
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+				<div class="grow">
+					<img src="https://i.pinimg.com/originals/c6/e4/49/c6e449b9aa0adca4dc0f3e505d394e30.jpg">
+					<p>Итальянский кинематографист Паоло Дженовезе планирует занять режиссерское кресло и написать сценарий картины «Второе пришествие» (Second Coming), основанной на одноименном сатирическом романе Джона Найвена.</p>
+				</div>
+			</td>
+		</tr>		
   </table>
-  <p><a href="/post/<%= (i + 1) %>">Our reviews</a></p>
  </body>
 </html>

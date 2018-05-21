@@ -13,6 +13,7 @@ var rate = JSON.parse(body);
 
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded( {extended:true} ) );
+app.use(express.static(__dirname + '/public'));
 
 var reviews = [
 	{ title: "Igoor", content: "Great WEBsite" },
@@ -20,11 +21,13 @@ var reviews = [
 	{ title: "Ivan", content: "Great WEBsite" }
 ];//здесь хранится все что постится на страницу reviews 
 
+
 var posts = [
-	{ title: rate[0].ccy, content: rate[0].buy, content1: "-", content2: rate[0].sale },//если будешь добавлять здесь content то не забудь сделать это и на странице main там оставлю коммент
+	{ title: rate[0].ccy, content: rate[0].buy, content1: "-", content2: rate[0].sale },
 	{ title: rate[1].ccy, content: rate[1].buy, content1: "-", content2: rate[1].sale },
 	{ title: rate[2].ccy, content: rate[2].buy, content1: "-", content2: rate[2].sale },
 ];//здесь хранится все что постится на главную страницу в данном случае тут лежат json данные из файлы courses
+
 
 app.get( "/", function( req, res ) {
 	res.render( "main.ejs", {posts: posts} );//делаем доступным posts для использования в стр main
@@ -54,14 +57,14 @@ app.post( "/post", function(req, res){//для постинга на стран�
 	let transporter = nodemailer.createTransport({//опции для использования почтовика как площадки для отправки
 		service: 'outlook',
 		auth: {
-			user: 'exmple@outlook.com', 
+			user: 'rorykory@outlook.com', 
 			pass: '' 
 		}
 	});
 
 	let mailOptions = {//для отправки данных с страницы post
-		from: 'example@outlook.com', //введите здесь свой email
-		to: 'example@gmail.com',  
+		from: 'rorykory@outlook.com', //введите здесь свой email
+		to: 'rory@ua.fm',  
 		subject: title,
 		text: content
 	}
